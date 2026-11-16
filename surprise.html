@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Universe ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eaf6ff;
+    font-family: 'Quicksand', sans-serif;
+    color: #6d8da6;
+    padding: 35px 15px;
+}
+
+.container {
+    max-width: 680px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(255,255,255,0.88);
+    border: 1px solid #d5eafa;
+    border-radius: 25px;
+    padding: 32px 23px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(126,174,207,0.13);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-text {
+    color: #9bbdd7;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #709fc1;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 13px;
+}
+
+h3 {
+    color: #739bb9;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.rose {
+    color: #83afd0;
+    font-size: 24px;
+    margin: 12px;
+}
+
+.section-description {
+    color: #9bb2c5;
+    margin-bottom: 23px;
+}
+
+/* FOTOS */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin: 22px 0;
+}
+
+.photo-frame {
+    background: #f2f8fd;
+    padding: 8px;
+    border: 1px solid #d9eaf6;
+    border-radius: 13px;
+    transform: rotate(-2deg);
+    box-shadow: 0 4px 12px rgba(120,160,190,0.10);
+}
+
+.photo-frame:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.photo-space {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    background: #f5faff;
+}
+
+.photo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.photo-caption {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    color: #83a8c3;
+    padding: 11px 2px 5px;
+    letter-spacing: 0.3px;
+}
+
+/* MÚSICAS E ANIMES */
+
+.music-item, .anime-item {
+    background: #f3f9fe;
+    border: 1px solid #e0eef8;
+    border-radius: 16px;
+    padding: 17px;
+    margin-bottom: 13px;
+    text-align: left;
+}
+
+.music-item p, .anime-item p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* BOTÕES DO SPOTIFY */
+
+.spotify-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, #a9d2ee, #83b6da);
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 1px solid #d9edfa;
+    transition: 0.3s ease;
+}
+
+.spotify-button:hover {
+    background: #78acd2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(126,174,207,0.2);
+}
+
+/* MOTIVOS E SONHOS */
+
+.love-item, .dream-item {
+    background: #f4f9fe;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 11px;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #e5f0f8;
+}
+
+.love-item span, .dream-item span {
+    color: #83afd0;
+    margin-right: 8px;
+}
+
+/* DETALHES */
+
+.divider {
+    width: 65%;
+    height: 1px;
+    background: #dcecf7;
+    margin: 24px auto;
+}
+
+.ending {
+    background: #eaf5fd;
+    border: 1px solid #d8eaf7;
+    border-radius: 20px;
+    padding: 25px 18px;
+    margin-top: 22px;
+}
+
+.ending p {
+    color: #789bb5;
+}
+
+/* BOTÃO DE VOLTAR */
+
+.nav-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #a9d2ee, #83b6da);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px solid #d9edfa;
+    box-shadow: 0 5px 15px rgba(126,174,207,0.2);
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    background: #78acd2;
+}
+
+footer {
+    text-align: center;
+    color: #9bbbd1;
+    font-size: 11px;
+    padding: 15px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 29px;
+    }
+
+    .card {
+        padding: 27px 17px;
+    }
+
+    .photo-space {
+        height: 170px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ABERTURA -->
+    <section class="card">
+        <p class="top-text">A LITTLE UNIVERSE MADE FOR YOU</p>
+
+        <div class="rose">❀</div>
+
+        <h1>Our Little Universe ♡</h1>
+
+        <p>
+            A little place filled with our songs,
+            memories, dreams and all the reasons
+            why you are so special to me.
+        </p>
+
+        <div class="rose">🩵</div>
+
+        <p style="font-size: 11px; color: #a6bfd2;">
+            made with love, just for you
+        </p>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="card">
+        <div class="rose">❀</div>
+
+        <h2>Our Little Memories ♡</h2>
+
+        <p class="section-description">
+            Little pieces of our favorite moments.
+        </p>
+
+        <div class="photo-gallery">
+
+            <div class="photo-frame">
+                <div class="photo-space">
+                    <img src="festa.jpeg" alt="Our moment together">
+                </div>
+                <div class="photo-caption">
+                    A night to remember ♡
+                </div>
+            </div>
+
+            <div class="photo-frame">
+                <div class="photo-space">
+                    <img src="flores-azuis.png" alt="Blue flowers">
+                </div>
+                <div class="photo-caption">
+                    A little piece of beauty ❀
+                </div>
+            </div>
+
+            <div class="photo-frame">
+                <div class="photo-space">
+                    <img src="foto2.jpeg" alt="Our mirror picture">
+                </div>
+                <div class="photo-caption">
+                    One of my favorite moments ♡
+                </div>
+            </div>
+
+            <div class="photo-frame">
+                <div class="photo-space">
+                    <img src="ilustracao.webp" alt="Couple illustration">
+                </div>
+                <div class="photo-caption">
+                    Our little anime world 🩵
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PLAYLIST -->
+    <section class="card">
+        <div class="rose">❀</div>
+
+        <h2>Our Playlist ♡</h2>
+
+        <p class="section-description">
+            Every song has a little piece of us.
+        </p>
+
+        <div class="music-item">
+            <h3>01. Our First Song</h3>
+            <p>A song that reminds me of you.</p>
+
+            <a class="spotify-button"
+               href="https://open.spotify.com/track/2Ch7LmS7r2Gy2kc64wv3Bz"
+               target="_blank"
+               rel="noopener noreferrer">
+               ♡ Listen on Spotify
+            </a>
+        </div>
+
+        <div class="music-item">
+            <h3>02. A Song for You</h3>
+            <p>One of the songs I want to share with you.</p>
+
+            <a class="spotify-button"
+               href="https://open.spotify.com/track/4ipDXHc66uOSZ1igOKvOvC"
+               target="_blank"
+               rel="noopener noreferrer">
+               ♡ Listen on Spotify
+            </a>
+        </div>
+
+        <div class="music-item">
+            <h3>03. Our Favorite</h3>
+            <p>A little soundtrack for our story.</p>
+
+            <a class="spotify-button"
+               href="https://open.spotify.com/track/1TYqrI2JRi6QssuRMTh2iy"
+               target="_blank"
+               rel="noopener noreferrer">
+               ♡ Listen on Spotify
+            </a>
+        </div>
+    </section>
+
+    <!-- ANIMES -->
+    <section class="card">
+        <h2>Our Anime World ♡</h2>
+
+        <p class="section-description">
+            Worlds I want to explore with you.
+        </p>
+
+        <div class="anime-item">
+            <h3>♡ Anime One</h3>
+            <p>An anime I want to watch with you.</p>
+        </div>
+
+        <div class="anime-item">
+            <h3>♡ Anime Two</h3>
+            <p>Another story for our little marathon.</p>
+        </div>
+
+        <div class="anime-item">
+            <h3>♡ Anime Three</h3>
+            <p>More memories waiting to happen.</p>
+        </div>
+    </section>
+
+    <!-- MOTIVOS -->
+    <section class="card">
+        <h2>Why I Love You ♡</h2>
+
+        <p class="section-description">
+            A few reasons among countless others.
+        </p>
+
+        <div class="love-item">
+            <span>♡</span> Your way of being.
+        </div>
+
+        <div class="love-item">
+            <span>♡</span> The way you make me smile.
+        </div>
+
+        <div class="love-item">
+            <span>♡</span> Your personality and your kindness.
+        </div>
+
+        <div class="love-item">
+            <span>♡</span> The happiness of having you in my life.
+        </div>
+
+        <div class="love-item">
+            <span>♡</span> Everything that makes you who you are.
+        </div>
+    </section>
+
+    <!-- SONHOS -->
+    <section class="card">
+        <h2>Our Little Dreams ♡</h2>
+
+        <p class="section-description">
+            A few things I want to experience with you.
+        </p>
+
+        <div class="dream-item">
+            <span>☁</span> Watch the sunset together.
+        </div>
+
+        <div class="dream-item">
+            <span>☁</span> Travel somewhere new.
+        </div>
+
+        <div class="dream-item">
+            <span>☁</span> Have our own anime marathons.
+        </div>
+
+        <div class="dream-item">
+            <span>☁</span> Take lots of pictures together.
+        </div>
+
+        <div class="dream-item">
+            <span>☁</span> Create thousands of new memories.
+        </div>
+
+        <div class="ending">
+            <div class="rose">❀</div>
+
+            <h2>And Many More... ♡</h2>
+
+            <p>
+                I don't know everything the future holds,
+                but there are so many beautiful things
+                I want to experience with you.
+            </p>
+
+            <div class="rose">🩵</div>
+        </div>
+
+        <!-- BOTÃO PARA A PRIMEIRA PÁGINA -->
+        <a href="./index.html" class="nav-button">
+            Back to the Beginning ♡
+        </a>
+
+    </section>
+
+    <footer>
+        Made with love, just for you ♡
+        <p>❀ 🩵 ❀</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
